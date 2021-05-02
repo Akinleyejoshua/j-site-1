@@ -1,0 +1,209 @@
+body{
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    background: linear-gradient(to right, slateblue, darkslateblue);
+    display: flex;
+    /* box-shadow: 0px 0px 5px black; */
+    color: white;
+}
+
+header .logo{
+    margin: 1em;
+    font-weight: bolder;
+}
+
+header .nav{
+    align-self: center;
+    margin-left: auto;
+    display: flex;
+    margin-right: 5px;
+}
+
+header .nav a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+header .nav a:hover{
+    background-color: slateblue;
+}
+
+header .icon{
+    font-weight: bolder;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    display: none;
+}
+
+header .icon:after{
+    content: "\2630";
+}
+
+@media screen and (max-width: 600px){
+    header{
+        flex-direction: column;
+    }
+
+    header .nav{
+        width: 100%;
+        flex-direction: column;
+        max-height: 0;
+        transition: max-height 0.5s;
+        overflow: hidden;
+    }
+
+    header .icon{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+}
+
+.row{
+    display: flex;
+    box-shadow: 0px 0px 5px;
+    height: 34.33em;
+    margin: 5px;
+}
+
+.row .sidebar{
+    flex: 20%;
+    text-align: center;
+    background: linear-gradient(to right,slateblue, darkslateblue);
+    overflow: hidden;
+}
+
+.row .main{
+    flex: 80%;
+    text-align: center;
+    overflow: auto;
+    background: url("Desert.jpg");
+}
+
+.row .sidebar button{
+    color: white;
+    border: none;
+    background-color: inherit;
+    width: 100%;
+    font-weight: bolder;
+    padding: 1em;
+}
+
+.row .sidebar button:hover{
+    background-color: slateblue;
+}
+
+footer{
+    background: linear-gradient(to right, slateblue, darkslateblue);
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){
+    .row{
+        flex-direction: column;
+        margin: 0;
+    }
+    .row .sidebar{
+        display: flex;
+    }
+
+}
+
+.content{
+    color: white;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.content h1{
+    font-family: cursive;
+}
+
+.content a{
+    border: 2px solid;
+    padding: 1em;
+    align-self: center;
+    transition: 0.1s;
+    margin: 100% 0em;
+    color:  white;
+}
+
+.content a:hover{
+    background-color: rgba(105, 90, 205, 0.8);
+    color: white;
+    border: none;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.modal{
+    position: fixed;
+    background-color: rgba(128, 128, 128, 0.6);
+    padding: 1em;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+}
+
+.modal-content{
+    background-color: darkslateblue;
+    width: max-content;
+    height: 0;
+    overflow: auto;
+    transition: height 0.5s;
+    margin-top: 5em;
+    box-shadow: 0px 0px 10px black;
+}
+
+.modal-content .avater{
+    margin-bottom: 1em;
+}
+
+input{
+    border: none;
+    background-color: slateblue;
+    padding: 1em;
+    margin: 1em;
+    color: white;
+    font-weight: bolder;
+}
+
+input[type="button"]{
+    margin: 1em;
+    box-shadow: 0px 0px 4px black;
+    border-radius: 5px;
+}
+
+input[value="Cancle"]{
+    background-color: rgba(255, 0, 0, 0.404);
+}
+
+input[value="Cancle"]:hover,
+input[type="button"]:hover{
+    box-shadow: 0px 0px 1px black;
+}
+
+
+@media (max-width: 600px){
+    .modal-content{
+        margin-right: 20%;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Website</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <p class="logo">Tech.</p>
+
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <a href="#" class="icon" onclick="openNav()"></a>
+    </header>
+
+    <div class="row">
+        <div class="sidebar">
+            <button>Get Started</button>
+            <button>Community</button>
+            <button>Developer Team</button>
+        </div>
+        <div class="main">
+            <div class="content">
+                <h1>Welcome</h1>
+                <a href="#" onclick="getElementById('signin-modal').style.display='flex';
+                var modalContent = document.querySelector('.modal-content')
+                modalContent.style.height = modalContent.scrollHeight + 'px';
+                modalContent.style.padding = '2em'
+                ">Sign in</a>
+
+                <div id="signin-modal" class="modal">
+                    <div class="modal-content">
+                        <form action="post">
+                            <div class="avater"><img src="logo.png"></div>
+
+                            <label for="uname"><b>Username</b></label><br>
+                            <input type="username" placeholder="Your username"><br>
+
+                            <label for="pswd"><b>Password</b></label><br>
+                            <input type="password" placeholder="Your password"><br>
+
+
+                            <input type="button" value="Login">
+
+                            <input type="button" value="Cancle" onclick="document.getElementById('signin-modal').style.display='none'
+                            var modalContent = document.querySelector('.modal-content')
+                modalContent.style.height = '0px';">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Akinleye Joshua</p>
+    </footer>
+</body>
+<script src="index.js"></script>
+
+</html>
